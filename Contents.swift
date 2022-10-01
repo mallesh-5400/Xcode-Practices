@@ -56,3 +56,4 @@ let obj = PostAPIManager()
 obj.registerUser()
 print("\n")
 obj.getRegisteredUserData()
+
