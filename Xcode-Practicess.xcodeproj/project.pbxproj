@@ -13,6 +13,9 @@
 		A8077C3828FEAB98004F1604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8077C3628FEAB98004F1604 /* Main.storyboard */; };
 		A8077C3A28FEAB9A004F1604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8077C3928FEAB9A004F1604 /* Assets.xcassets */; };
 		A8077C3D28FEAB9A004F1604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8077C3B28FEAB9A004F1604 /* LaunchScreen.storyboard */; };
+		A82B97B528FF058D00569689 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF98B528FEB03D003941E6 /* CustomTableViewCell.swift */; };
+		A8DF98B928FEB03D003941E6 /* AmiiboModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF98B628FEB03D003941E6 /* AmiiboModel.swift */; };
+		A8DF98BD28FEB5B6003941E6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF98BC28FEB5B6003941E6 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A8077C3928FEAB9A004F1604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8077C3C28FEAB9A004F1604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8077C3E28FEAB9A004F1604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8DF98B528FEB03D003941E6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		A8DF98B628FEB03D003941E6 /* AmiiboModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmiiboModel.swift; sourceTree = SOURCE_ROOT; };
+		A8DF98BC28FEB5B6003941E6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		A8077C2F28FEAB98004F1604 /* Xcode-Practicess */ = {
 			isa = PBXGroup;
 			children = (
+				A8DF98B628FEB03D003941E6 /* AmiiboModel.swift */,
+				A8DF98B528FEB03D003941E6 /* CustomTableViewCell.swift */,
 				A8077C3028FEAB98004F1604 /* AppDelegate.swift */,
 				A8077C3228FEAB98004F1604 /* SceneDelegate.swift */,
 				A8077C3428FEAB98004F1604 /* ViewController.swift */,
@@ -63,6 +71,7 @@
 				A8077C3928FEAB9A004F1604 /* Assets.xcassets */,
 				A8077C3B28FEAB9A004F1604 /* LaunchScreen.storyboard */,
 				A8077C3E28FEAB9A004F1604 /* Info.plist */,
+				A8DF98BC28FEB5B6003941E6 /* NetworkManager.swift */,
 			);
 			path = "Xcode-Practicess";
 			sourceTree = "<group>";
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82B97B528FF058D00569689 /* CustomTableViewCell.swift in Sources */,
 				A8077C3528FEAB98004F1604 /* ViewController.swift in Sources */,
+				A8DF98B928FEB03D003941E6 /* AmiiboModel.swift in Sources */,
+				A8DF98BD28FEB5B6003941E6 /* NetworkManager.swift in Sources */,
 				A8077C3128FEAB98004F1604 /* AppDelegate.swift in Sources */,
 				A8077C3328FEAB98004F1604 /* SceneDelegate.swift in Sources */,
 			);
