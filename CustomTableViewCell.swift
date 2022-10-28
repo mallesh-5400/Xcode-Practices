@@ -39,7 +39,6 @@ class CustomTableViewCell: UITableViewCell {
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         button.backgroundColor = .systemBlue
        // button.titleLabel?.numberOfLines = 0
-        button.titleLabel?.contentCompressionResistancePriority(for: .horizontal)
         button.setTitle("Continue", for: .normal)
         button.isHidden = true
         return button
@@ -65,7 +64,6 @@ class CustomTableViewCell: UITableViewCell {
     }()
     
     lazy var mainStackView1: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [continueButton, mainStackView2])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = UIStackView.Alignment.center
         stackView.distribution = UIStackView.Distribution.fill
