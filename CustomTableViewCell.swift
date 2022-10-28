@@ -39,7 +39,6 @@ class CustomTableViewCell: UITableViewCell {
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         button.backgroundColor = .systemBlue
        // button.titleLabel?.numberOfLines = 0
-        button.titleLabel?.contentHuggingPriority(for: .vertical)
         button.setTitle("Continue", for: .normal)
         button.isHidden = true
         return button
@@ -65,7 +64,6 @@ class CustomTableViewCell: UITableViewCell {
     }()
     
     lazy var mainStackView1: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [mainStackView2, continueButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = UIStackView.Alignment.center
         stackView.distribution = UIStackView.Distribution.fill
@@ -114,7 +112,6 @@ class CustomTableViewCell: UITableViewCell {
         buttonState = .hidden
     }
     
-    //MARK: - This function will select the particular cell being tapped and performs required action.We can mainly use it for expanding and collpsing of cells.
     override func setSelected(_ selected: Bool, animated: Bool) {
       //MARK: - If dont write below line also this function will behave we are expecting
       //  super.setSelected(selected, animated: animated)
