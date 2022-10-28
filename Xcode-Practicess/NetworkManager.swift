@@ -33,4 +33,33 @@ class NetworkManager {
         }.resume()
     }
     
+    func getUserAPIData<T: Decodable>(url: URL?, resultType:T.Type ,completionHandler: @escaping(_ model: T?) -> Void) {
+        
+        guard let url = url else {
+            debugPrint("URL is not corrcct")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) {
+            data, response, error in
+            
+            if data != nil && data?.count != 0 {
+                //let data = String(data: data!, encoding: .utf8)
+                do {
+                    let result = try JSONDecoder().decode(T.self, from: data!)
+                    completionHandler(result)
+                    print(result)
+                } catch {
+                    print(error)
+                }
+                
+            } else {
+                let responseMsg = response as? HTTPURLResponse
+                print(responseMsg as Any)
+                print(error.debugDescription)
+            }
+        }.resume()
+    }
+    
+    
 }

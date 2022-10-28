@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ThirdViewController.swift
 //  Xcode-Practicess
 //
 //  Created by user227716 on 10/18/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ThirdViewController: UIViewController {
     
     
     private let tableView = UITableView()
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDataSource {
+extension ThirdViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return dataArray.count
     }
@@ -78,7 +78,7 @@ extension ViewController: UITableViewDataSource {
     
 }
 
-extension ViewController: UITableViewDelegate {
+extension ThirdViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         

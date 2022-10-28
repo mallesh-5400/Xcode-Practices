@@ -39,7 +39,6 @@ class CustomTableViewCell: UITableViewCell {
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         button.backgroundColor = .systemBlue
        // button.titleLabel?.numberOfLines = 0
-        button.titleLabel?.contentHuggingPriority(for: .vertical)
         button.setTitle("Continue", for: .normal)
         button.isHidden = true
         return button
@@ -64,18 +63,6 @@ class CustomTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    lazy var mainStackView1: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [mainStackView2, continueButton])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = UIStackView.Alignment.center
-        stackView.distribution = UIStackView.Distribution.fill
-        stackView.axis = NSLayoutConstraint.Axis.vertical
-        stackView.spacing = 5
-        stackView.backgroundColor = UIColor.cyan
-        return stackView
-    }()
-    
-    
     
     
     private var buttonState: ContinueButtonState = .hidden
@@ -93,14 +80,14 @@ class CustomTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func addViews() {
-        addSubview(mainStackView1)
+        addSubview(mainStackView2)
     }
     
     func setUpNewUI() {
-        mainStackView1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        mainStackView1.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        mainStackView1.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        mainStackView1.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        mainStackView2.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        mainStackView2.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        mainStackView2.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        mainStackView2.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         hideButton()
     }
     
@@ -114,7 +101,6 @@ class CustomTableViewCell: UITableViewCell {
         buttonState = .hidden
     }
     
-    //MARK: - This function will select the particular cell being tapped and performs required action.We can mainly use it for expanding and collpsing of cells.
     override func setSelected(_ selected: Bool, animated: Bool) {
       //MARK: - If dont write below line also this function will behave we are expecting
       //  super.setSelected(selected, animated: animated)
