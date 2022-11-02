@@ -130,6 +130,7 @@ class FirstViewController: UIViewController {
 //            return
 //        }
         
+        
         generateURLLink(emailId: emailText, password: passwordText)
         
         userCredentialsCorrect() {
