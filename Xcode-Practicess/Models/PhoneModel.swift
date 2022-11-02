@@ -16,6 +16,8 @@ struct PhoneDetails: Decodable {
     let name, operatingSystem, manufacturer, color: String?
 }
 
+
+
 //{
 //  "errorMessage": "",
 //  "data": [
