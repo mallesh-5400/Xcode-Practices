@@ -15,8 +15,6 @@ class SecondViewController: UIViewController {
         button.setTitle("Go to tableview VC lsjdlsdjflksdjflksflkdsfjlskjfldskfjslfjslkfjdlkfjdslkfjldjfladsfjldksjf", for: .normal)
         button.backgroundColor = .blue
         button.subtitleLabel?.numberOfLines = 0
-       // button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-       // button.widthAnchor.constraint(equalToConstant: 80).isActive = true
         button.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
         button.setTitleColor(.systemGreen, for: .normal)
         return button
@@ -38,9 +36,6 @@ class SecondViewController: UIViewController {
     }
     
     @objc func tapButton() {
-       // let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        //let ThirdViewController = storyboard.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
-        //self.navigationController?.pushViewController(ThirdViewController, animated: true)
         
         let thirdVC = ThirdViewController()
         thirdVC.navigationController?.isToolbarHidden = false
@@ -49,15 +44,5 @@ class SecondViewController: UIViewController {
        // present(secVC, animated: true)
         //show(secVC, sender: self)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
