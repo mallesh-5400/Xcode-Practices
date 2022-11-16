@@ -42,9 +42,9 @@ struct PostAPIManager {
         URLSession.shared.dataTask(with: URL(string: EndPoint.getUser )!) {
             data, _, error in
             
-            if data != nil && data?.count != 0 {
-                let data = String(data: data!, encoding: .utf8)
-                print(data!)
+            if let  newData = data, newData?.count != 0 {
+                let data = String(data: newData, encoding: .utf8)
+                print(data)
             } else {
                 print(error as Any)
             }
